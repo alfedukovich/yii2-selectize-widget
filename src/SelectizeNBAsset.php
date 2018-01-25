@@ -19,7 +19,7 @@ class SelectizeNBAsset extends AssetBundle
     public $sourcePath = '@bower/selectize/dist';
 
     public $css = [
-        'css/selectize.css',
+        'css/selectize.legacy.css',
     ];
     public $js = [
         'js/standalone/selectize.js',

@@ -55,10 +55,10 @@ class InputWidget extends \yii\widgets\InputWidget
 
         $options = Json::encode($this->clientOptions);
         $view = $this->getView();
-        if( (isset($this->options['bootstrap']) && $this->options['bootstrap']===true) || !isset($this->options['bootstrap'])) {
-            SelectizeAsset::register($view);
-        } else {
+        if( isset($this->options['bootstrap']) && $this->options['bootstrap']===false ) {
             SelectizeNBAsset::register($view);
+        } else {
+            SelectizeAsset::register($view);
         }
         $view->registerJs("jQuery('#$id').selectize($options);");
     }
